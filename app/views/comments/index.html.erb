@@ -1,7 +1,7 @@
 <h1>Listing all comments</h1>
 
 <% if current_user %>
-	<p><%= link_to 'new comment', new_comment_path %></p>
+	<p><%= link_to 'new comment', new_post_comment_path %></p>
 <% end %>
 
 <ul>
@@ -9,7 +9,7 @@
 		<li>
 			<%= link_to comment.title, post_comments_path(comment) %>
 			<!-- test -->
-			<% if current_user == post.user %>
+			<% if current_user == current_post %>
 			 | 
 			<%= link_to 'edit', edit_post_comment_path(comment) %> |
 			<%= link_to 'delete', post_comments_path(comment), method: :delete, data: {confirm: "Really delete this comment?"} %>

@@ -26,7 +26,7 @@ before_action :set_comment, only: [:new, :edit, :show, :destroy]
   	@comment = Comment.create(comment_params)
     @comment.user = current_user
     @comment.post = current_post
-    redirect_to posts_path, notice: "Your comment has been posted."
+    redirect_to :back , notice: "Your comment has been posted."
   end
 
   def destroy
@@ -41,7 +41,7 @@ before_action :set_comment, only: [:new, :edit, :show, :destroy]
   end
 
   def comment_params
-    params.require(:comment).permit(:title, :body).merge(user_id: current_user.id)
+    params.require(:comment).permit(:title, :body).merge(user_id: current_user.id, post_id: current_post.id)
   end
 
 
