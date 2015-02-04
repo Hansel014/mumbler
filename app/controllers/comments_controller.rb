@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-before_action :set_comment, only: [:edit, :show, :destroy]
+before_action :set_comment, only: [:new, :edit, :show, :destroy]
 
   def index
   	@comments = Comment.all 
@@ -11,6 +11,7 @@ before_action :set_comment, only: [:edit, :show, :destroy]
     else
       flash[:notice] = "Please sign in first."
       redirect_to signin_path
+    end
   end
 
   def show
@@ -21,6 +22,8 @@ before_action :set_comment, only: [:edit, :show, :destroy]
 
   def create
   	@comment = Comment.create(comment_params)
+    @comment.user = current_user
+    @comment.post = current_post
     redirect_to @comment, notice: "Your comment has been posted."
   end
 

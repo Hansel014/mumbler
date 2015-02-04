@@ -2,3 +2,6 @@
 <p><%= @post.body %></p>
 
 <%= link_to 'new post', new_post_path %> 
+
+<h3>Comment: </h3>
+<%= render 'comments/commentform' %>

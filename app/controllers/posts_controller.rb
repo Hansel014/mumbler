@@ -18,6 +18,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
   end
 
   def create
@@ -40,6 +41,8 @@ class PostsController < ApplicationController
   def set_post
     @post = Post.find(params[:id])
   end
+
+  
 
   def post_params
     params.require(:post).permit(:title, :body).merge(user_id: current_user.id)
