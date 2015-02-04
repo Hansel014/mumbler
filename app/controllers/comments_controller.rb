@@ -8,10 +8,12 @@ before_action :set_comment, only: [:new, :edit, :show, :destroy]
   def new
   	if current_user
      @comment = Comment.new
+     @post = Post.find(params[:post_id])
     else
       flash[:notice] = "Please sign in first."
       redirect_to signin_path
     end
+
   end
 
   def show
@@ -24,7 +26,7 @@ before_action :set_comment, only: [:new, :edit, :show, :destroy]
   	@comment = Comment.create(comment_params)
     @comment.user = current_user
     @comment.post = current_post
-    redirect_to @comment, notice: "Your comment has been posted."
+    redirect_to posts_path, notice: "Your comment has been posted."
   end
 
   def destroy

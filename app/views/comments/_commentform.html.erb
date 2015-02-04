@@ -1,4 +1,4 @@
-<%= form_for @comment do |s| %>
+<%= form_for [@post, @comment] do |s| %>
 
 	<%= s.label :title %>
 	<%= s.text_field :title %><br />

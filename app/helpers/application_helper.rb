@@ -7,5 +7,7 @@ module ApplicationHelper
   	def current_post
   	 params[:id] ? Post.find(params[:id]) : nil
   	end
+
+  	
   
 end
