@@ -14,9 +14,12 @@
  *= require_self
  */
 body{
-	margin: 0;
+	margin:0;
+	/*background-color: #0A1E40;*/
+/*	background-image: url('loginbg.jpg');*/
 }
-header{
+
+/*header{
 	color:white;
 	background-color: black;
 	top:0;
@@ -24,4 +27,5 @@ header{
 	height: 40px;
 	text-align: center;
 	padding-top: 20px;
-}
+}*/
+

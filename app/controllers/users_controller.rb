@@ -3,6 +3,12 @@ class UsersController < ApplicationController
 	
   def index
   	@users = User.all
+    if current_user 
+      redirect_to posts_path
+    else
+      
+    end
+
   end
 
   def new
@@ -17,7 +23,9 @@ class UsersController < ApplicationController
 
   def create
   	@user = User.create(user_params)
+    session[:user_id] = @user.id
   	redirect_to @user, notice: "New user created."
+
   end
 
   def update
