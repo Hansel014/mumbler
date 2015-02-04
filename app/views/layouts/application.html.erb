@@ -14,7 +14,9 @@
 	<%else%>
 	<%= link_to 'sign in', users_path%>
 	<%end%>
+	<br>
 	<%= flash[:notice] if flash[:notice] %>
+	<br>
 		<%= flash[:alert] if flash[:alert] %>
 	</div>
 
