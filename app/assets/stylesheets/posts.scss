@@ -1,7 +1,7 @@
 .rightnav {
 	position: fixed;
 	border: 1px solid black;
-	height: 700px;
+	height: 800px;
 	width: 150px;
 	right: 0;
 	margin-right: 100px;
@@ -21,12 +21,36 @@
 	
 }
 
+.commentbox {
+	text-align: center;
+
+}
+
+.commentborders {
+	border: 1px black solid;
+
+}
+
+.commentborders p {
+	text-align: right;
+}
+
+#comment_body {
+	resize: none;
+}
+
+#postbodyformat {
+	text-align: justify;
+	padding: 20px;
+}
+
 .poststyling {
 	border: 1px solid black;
 	height: 300px;
 	width: 800px;
-	margin-bottom: 20px;
+	padding-bottom: 20px;
 	margin: 0 auto;
+	margin-bottom: 40px;
 }
 
 .posttitle {
@@ -40,7 +64,9 @@
 	text-align: center;
 }
 
-#newpost, #viewprofile, #accountsettings, #signout, #followusers {
+
+
+#newpost, #viewprofile, #accountsettings, #signout, #followusers, #returnhome {
 	border: 1px solid black;
 	height: 100px;
 	width: 100px;
@@ -56,4 +82,11 @@
 
 .posttopmargin {
 	margin-top: 80px;
+}
+
+#timecreated {
+	margin-top: 14px;
+	font-size: 15px;
+	float: right;
+	padding-right: 5px;
 }

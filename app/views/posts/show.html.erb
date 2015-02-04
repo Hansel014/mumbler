@@ -1,22 +1,48 @@
-<h1><%= @post.title %></h1>
-<p><%= @post.body %></p>
+<div class="posttopmargin">
 
-<%= link_to 'new post', new_post_path %> 
 
- 
+<div class="postsbody">
+	<h1><%= @post.title %></h1>
+	<p id="postbodyformat"><%= @post.body %></p>
+	 
+	 <% if current_user == current_post.user %>
+				<%= link_to 'edit', edit_post_path %> |
+				<%= link_to 'delete', post_path, method: :delete, data: {confirm: "Really delete this post?"} %>
+	<% end %> 
 
-<h3>Comment </h3>
-<%= render 'comments/commentform' %>
-<br>
+<div class="commentbox">
+	<h3>Comment </h3>
+	<%= render 'comments/commentform' %>
+	<br>
+</div>
+	<h3>Post Comments</h3>
+	<% current_post.comments.last(10).reverse.each do |c| %>
+	<div class="commentborders">
+		<span><%= c.body %></span>
+		<p> Posted by: <%= c.user.name %></p>
+		<p><%= c.created_at.strftime("%b. %d %Y") %></p>
+	</div>
+	<% end %>
+</div>
+<div class="rightnav">
+	<div>
+		<ul>
+			<li id = "returnhome"><p><%= link_to 'Post', posts_path %></p></li>
+			<li id = "newpost"><p><%= link_to 'new post', new_post_path %></p></li>
+			<li id = "viewprofile"></li>
+			<li id = "followusers"></li>
+			<li id = "accountsettings"></li>
+			<li id = "signout"><%= link_to 'sign out', logout_path, method: :delete %></li>
 
-<h3>Post Comments</h3>
-<% current_post.comments.last(10).reverse.each do |c| %>
+
+		</ul>
+
+	</div>
 	
-	<p><%= c.body %></p>
-
-<% end %>
+</div>
 
 
 
-<!-- <%= current_post.comments.last.body%> -->
+</div>
+
 
