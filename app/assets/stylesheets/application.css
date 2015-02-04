@@ -23,13 +23,16 @@ body{
 	position:absolute;
 }
 
-/*header{
+header{
+	position: fixed;
 	color:white;
-	background-color: black;
+	background-color: rgba(10, 10, 10, .4);
 	top:0;
 	font-family: helvetica;
 	height: 40px;
 	text-align: center;
-	padding-top: 20px;
-}*/
+	/*padding-top: 20px;*/
+	width: 100%;
+
+}
 

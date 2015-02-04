@@ -1,3 +1,59 @@
-// Place all the styles related to the Posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.rightnav {
+	position: fixed;
+	border: 1px solid black;
+	height: 700px;
+	width: 150px;
+	right: 0;
+	margin-right: 100px;
+	background-color: rgba(10, 10, 10, .4);
+}
+
+.rightnav ul, .postsbody ul {
+	list-style-type: none;
+}
+
+.postsbody {
+	position: absolute;
+	border: 1px solid black;
+	width: 1000px;
+	height: 5000px;
+	margin-left: 200px;
+	
+}
+
+.poststyling {
+	border: 1px solid black;
+	height: 300px;
+	width: 800px;
+	margin-bottom: 20px;
+	margin: 0 auto;
+}
+
+.posttitle {
+	border: 1px solid black;
+	height: 30px;
+	width: 800px;
+	font-size: 1.3em;
+}
+
+.postsbody h1 {
+	text-align: center;
+}
+
+#newpost, #viewprofile, #accountsettings, #signout, #followusers {
+	border: 1px solid black;
+	height: 100px;
+	width: 100px;
+	margin-bottom: 30px;
+	text-align: center;
+	margin-left: -15px;
+	background-color: white;
+}
+
+#newpost {
+	margin-top: 33px;
+}
+
+.posttopmargin {
+	margin-top: 80px;
+}

@@ -10,9 +10,9 @@
 	<header>
 	<div class="signoutlink">
 	<% if current_user != nil %>
-	<%= link_to 'sign out', logout_path, method: :delete %>
+	<!-- <%= link_to 'sign out', logout_path, method: :delete %> -->
 	<%else%>
-	<%= link_to 'sign in', users_path%>
+<!-- 	<%= link_to 'sign in', users_path%> -->
 	<%end%>
 	<br>
 	<%= flash[:notice] if flash[:notice] %>
