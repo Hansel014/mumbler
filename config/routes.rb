@@ -1,15 +1,9 @@
 Rails.application.routes.draw do
 
-  get 'comments/index'
-
-  get 'comments/new'
-
-  get 'comments/show'
-
-  get 'comments/edit'
-
     resources :users
-    resources :posts
+    resources :posts do 
+      resources :comments
+    end
 
      get '/signin', to: 'sessions#new'
       post '/signin', to: 'sessions#create'
