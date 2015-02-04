@@ -3,5 +3,16 @@
 
 <%= link_to 'new post', new_post_path %> 
 
+<ul>
+	<% current_post.comments.each do |comment| %>
+		<li>
+			<%= link_to comment.title, comments_path(comment) %> | 
+			<%= link_to 'edit', edit_post_comment_path(comment) %> |
+			<%= link_to 'delete', comments_path(comment), method: :delete, data: {confirm: "Really delete this comment?"} %>
+		</li>
+	<% end %>
+</ul> 
+
 <h3>Comment: </h3>
 <%= render 'comments/commentform' %>
+
