@@ -21,6 +21,7 @@ before_action :set_comment, only: [:edit, :show, :destroy]
 
   def create
   	@comment = Comment.create(comment_params)
+  	@comment.user = current_user
     redirect_to @comment, notice: "Your comment has been posted."
   end
 
