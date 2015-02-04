@@ -1,3 +1,45 @@
-// Place all the styles related to the Users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/*LOG IN BOX*/
+
+.loginbox, .newuserbox {
+
+	border: 1px;
+	border-radius: 10px;
+	height: 300px;
+	width: 300px;
+	/*margin: 0 auto;*/
+	margin-top: 250px;
+	margin-left: 37%;
+	padding: 30px;
+	position: absolute;
+	text-align: center;
+	background-color: rgba(10, 10, 10, .4);
+
+}
+
+#password, #email, #user_name, #user_email, #user_bio, #user_password {
+	width: 200px;
+	padding: 5px;
+	
+}
+
+
+
+.loginbox h1 {
+	padding-top: 30px;
+
+}
+
+.loginbox button{
+	text-align: left;
+	text-decoration: none;
+}
+
+.loginbody, .signinbody {
+	margin: 0 ;
+	height: 900px;
+	background-image: url('loginbg.jpg');
+	
+	
+}
+
+
