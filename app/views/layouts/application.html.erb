@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mumbler</title>
+  <title>Mumblr</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 	<header>
-	<div class="signoutlink">
-	<%= flash[:notice] if flash[:notice] %>
-	<br>
-		<%= flash[:alert] if flash[:alert] %>
-	</div>
+	<h1>Mumblr.</h1>
+		<div class="signoutlink">
+			<a class="notice"><%= flash[:notice] if flash[:notice] %></a>
+				<a class="alert"><%= flash[:alert] if flash[:alert] %></a>
+				<br>
 
+		</div>
 		<!-- <p><%= link_to 'New here? Sign Up!', new_user_path %></p> -->
 		
 

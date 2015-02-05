@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
 									 dependent: :destroy
 	has_many :following, through: :active_relationships, source: :followed
 	has_many :followers, through: :passive_relationships, source: :follower
+
+	has_attached_file :image, styles: {small: "64x64", med: "100x100", large: "200x200", icon:"32x32"}
 end
 	# Follows a user.
   def follow(other_user)
