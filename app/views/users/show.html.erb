@@ -3,6 +3,8 @@
 	<div class ="userprofilebody">
 		<div class="userprofilecontent">
 			<h1><%= @user.name %></h1>
+			<%= image_tag @user.image.url(:small) %>
+
 			<p>(<%= @user.email %>) <%= @user.bio %></p>
 
 			<h3><%= @user.name %>'s Posts</h3>

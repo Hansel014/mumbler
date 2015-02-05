@@ -60,7 +60,7 @@ class UsersController < ApplicationController
   end
 
 def user_params
-    params.require(:user).permit(:name, :bio, :email, :password)
+    params.require(:user).permit(:name, :bio, :email, :password, :image)
   end
 
     def follow(other_user)
