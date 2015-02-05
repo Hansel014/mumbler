@@ -2,9 +2,6 @@
 <br>
 
 
-<% if current_user %>
-	
-<% end %>
 
 <div class="postsbody">
 	<h1>Lastest Posts!</h1>
@@ -34,10 +31,10 @@
 	<div>
 		<ul>
 			<li id = "returnhome"><p><%= link_to 'Post', posts_path %></p></li>
-			<li id = "newpost"><p><%= link_to 'new post', new_post_path %></p></li>
-			<li id = "viewprofile"></li>
+			<li id = "newpost"><p><%= link_to 'New Post', new_post_path %></p></li>
+			<li id = "viewprofile"><p></p></li>
 			<li id = "followusers"></li>
-			<li id = "accountsettings"></li>
+			<li id = "accountsettings"><p><%= link_to 'Account Settings', edit_user_path(current_user) %></p></li>
 			<li id = "signout"><%= link_to 'sign out', logout_path, method: :delete %></li>
 
 

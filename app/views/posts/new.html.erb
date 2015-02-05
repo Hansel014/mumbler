@@ -1,5 +1,33 @@
+<div class="posttopmargin">
+<br>
+	<div class="newpostbody">
+		<h1>New Post</h1>
+		<%= render 'form' %>
+		<br />
+		<%= link_to 'cancel', posts_path %>
+	</div>
 
-	<h1>New Post</h1>
-	<%= render 'form' %>
-	<br />
-	<%= link_to 'cancel', posts_path %>
+
+
+	<div class="rightnav">
+	<div>
+		<ul>
+			<li id = "returnhome"><p><%= link_to 'Post', posts_path %></p></li>
+			<li id = "newpost"><p><%= link_to 'New Post', new_post_path %></p></li>
+			<li id = "viewprofile"><p></p></li>
+			<li id = "followusers"></li>
+			<li id = "accountsettings"><p></p></li>
+			<li id = "signout"><%= link_to 'sign out', logout_path, method: :delete %></li>
+
+
+		</ul>
+
+	</div>
+	
+</div>
+
+
+
+
+
+</div>
