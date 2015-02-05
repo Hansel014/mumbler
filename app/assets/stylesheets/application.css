@@ -20,6 +20,16 @@ body{
 	background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; */
+
+}
+
+.usernavpic {
+	float: left;
+}
+
+.usernavname {
+	color: white;
+	text-align: left;
 }
 
 .signoutlink {
@@ -55,6 +65,8 @@ header h1 {
 	text-align: right;
 	padding-right: 5px;
 	text-shadow: 1px 1px #636363;
-	margin-top: 5px;
+	margin-top: -50px;
+
+
 }
 

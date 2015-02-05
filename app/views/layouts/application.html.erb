@@ -8,6 +8,7 @@
 </head>
 <body>
 	<header>
+	<a class="usernavpic"><%= image_tag current_user.image.url(:icon)%> </a> <h3 class="usernavname">Welcome <%=current_user.name%>! </h3>
 	<h1>Mumblr.</h1>
 		<div class="signoutlink">
 			<a class="notice"><%= flash[:notice] if flash[:notice] %></a>
