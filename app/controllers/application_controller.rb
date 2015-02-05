@@ -10,5 +10,7 @@ class ApplicationController < ActionController::Base
   	def current_post
   	 	params[:post_id] ? Post.find(params[:post_id]) :nil
   	end
+
+  	
   
 end

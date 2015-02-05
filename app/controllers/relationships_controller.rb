@@ -13,6 +13,8 @@ class RelationshipsController < ApplicationController
     redirect_to users_path, notice: 'User Unfollowed'
   end
 
-  
+  def following?(other_user)
+    following.include?(other_user)
+  end
  
 end
