@@ -12,9 +12,9 @@
 	padding: 30px;
 	position: absolute;
 	text-align: center;
-	background-color: rgba(10, 10, 10, .4);
+	background-color: rgba(10, 10, 10, .8);
 	color: white;
-	text-shadow: 3px 3px #636363;
+	text-shadow: 1px 1px #636363;
 
 }
 
@@ -57,7 +57,7 @@
   text-decoration: none;
 }
 
-.loginbox a, .newuserbox a {
+.loginbox a, .newuserbox a, .edituserbody a {
 	text-decoration: none; 
 	color: white;
 }

@@ -8,6 +8,5 @@ module ApplicationHelper
   	 params[:id] ? Post.find(params[:id]) : nil
   	end
 
-  	
   
 end

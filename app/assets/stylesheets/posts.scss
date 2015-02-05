@@ -1,23 +1,28 @@
 .rightnav {
-	position: fixed;
 	border: 1px solid black;
 	height: 800px;
 	width: 150px;
-	right: 0;
+	float: right;
 	margin-right: 100px;
-	background-color: rgba(10, 10, 10, .4);
+	background-color: rgba(10, 10, 10, .8);
 	border-radius: 15px;
+
+
 }
 
 .rightnav ul, .postsbody ul {
 	list-style-type: none;
+
 }
+
+
 
 .rightnav li {
 	border-radius: 10px;
+
 }
 
-.postsbody, .newpostbody {
+.postsbody, .newpostbody, .edituserbody, .userprofilebody {
 	position: absolute;
 	border: 1px solid black;
 	width: 1000px;
@@ -51,7 +56,7 @@
 
 }
 
-.poststyling {
+.poststyling{
 	border: 1px solid black;
 	height: 300px;
 	width: 800px;
@@ -59,15 +64,27 @@
 	margin: 0 auto;
 	margin-bottom: 40px;
 	border-radius: 10px;
+	overflow: auto;
+	padding: 20px;
 }
 
 .posttitle {
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 	height: 30px;
 	width: 800px;
 	font-size: 1.3em;
-	border-radius: 10px;
+	border-radius: 5px;
+	background-color: rgba(10, 10, 10, .4);
+	padding: 5px;
 	
+}
+
+.posttitle a{
+	text-decoration: none;
+	color: white;
+	text-shadow: 2px 2px #636363;
+
+
 }
 
 .postsbody h1 {
@@ -83,7 +100,7 @@
 	margin-bottom: 30px;
 	text-align: center;
 	margin-left: -15px;
-	background-color: white;
+	background-color: #3D556E;
 }
 
 #newpost {
@@ -115,6 +132,8 @@
 	background-color: rgba(10, 10, 10, .4);
 	top:40px;
 }
+	
+}
 
 .postsbody {
 	position: absolute;
@@ -125,4 +144,7 @@
 
 }
 
+
+.editusercontent, .newpostcontent, {
+	text-align: center;
 }

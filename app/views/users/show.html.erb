@@ -1,13 +1,17 @@
-<h1><%= @user.name %></h1>
-<p>(<%= @user.email %>) <%= @user.bio %></p>
+<div class="posttopmargin">
+<br>
+	<div class ="userprofilebody">
+		<div class="userprofilecontent">
+			<h1><%= @user.name %></h1>
+			<p>(<%= @user.email %>) <%= @user.bio %></p>
 
-<h3><%= @user.name %>'s Posts</h3>
+			<h3><%= @user.name %>'s Posts</h3>
 
-<ul>
-	<% @user.posts.each do |post| %>
-	<li><%= link_to post.title, post %></li>
-	<% end %>
-</ul>
+			<ul>
+				<% @user.posts.each do |post| %>
+				<li><%= link_to post.title, post %></li>
+				<% end %>
+			</ul>
 
 
 <%= link_to 'back', users_path %> | <%= link_to 'edit', edit_user_path(@user) %>
@@ -23,3 +27,29 @@
 	<li><%= user.name %></li>
 <% end %>
 </ul>
+
+			
+		</div>
+	</div>
+
+	<div class="rightnav">
+	<div>
+		<ul>
+			<li id = "returnhome"><p><%= link_to 'Post', posts_path %></p></li>
+			<li id = "newpost"><p><%= link_to 'New Post', new_post_path %></p></li>
+			<li id = "viewprofile"><p><%= link_to 'View Profile', user_path(current_user)%></p></li>
+			<li id = "followusers"></li>
+			<li id = "accountsettings"><p><%= link_to 'Account Settings', edit_user_path(current_user) %></p></li>
+			<li id = "signout"><p><%= link_to 'sign out', logout_path, method: :delete %></p></li>
+
+
+		</ul>
+
+	</div>
+	
+</div>
+
+
+
+</div>
+>>>>>>> adb92b3db9d7463d1d8966d4805df29e779c3d96
