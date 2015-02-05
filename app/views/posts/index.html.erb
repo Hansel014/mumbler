@@ -1,9 +1,9 @@
 <div class="posttopmargin">
 <br>
-<div class="welcome">
+<!-- <div class="welcome">
 	<h1>Welcome <%= current_user.name %>!</h1>
 
-</div>
+</div> -->
 
 
 <div class="postsbody">
@@ -21,16 +21,24 @@
 				</div>
 				<br>
 				<div class="postbodystyling">
-				<%= post.body %>
+				<%= post.body[0...1000] %> ...
 				</div>
 				
 			
 				<div id="spaceme"></div>
-			
+				<p class="readmore"><%= link_to "Read More...", post_path(post) %></p>
 			</li>
-		<% end %>
+				<% end %>
 	</ul>
+	
+				
+
 </div>
+
+
+
+
+
 
 <div class="rightnav">
 	<div class="navbartext">
