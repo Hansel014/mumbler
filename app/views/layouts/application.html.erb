@@ -10,9 +10,12 @@
 	<header>
 	<% if current_user != nil %>
 	<a class="usernavpic"><%= image_tag current_user.image.url(:icon)%> </a> <h3 class="usernavname">Welcome <%=current_user.name%>! </h3>
+	<h1 class="mumblrlogo"><%= "Mumblr." %></h1>
 	<%else%>
+		<h1 class="mumblrlogo2"><%= "Mumblr." %></h1>
 	<%end%>
-	<h1>Mumblr.</h1>
+		<!-- <h1 class="mumblrlogo">Mumblr.</h1> -->
+	
 		<div class="signoutlink">
 			<a class="notice"><%= flash[:notice] if flash[:notice] %></a>
 				<a class="alert"><%= flash[:alert] if flash[:alert] %></a>

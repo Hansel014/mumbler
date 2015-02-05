@@ -60,13 +60,22 @@ header{
 
 }
 
-header h1 {
+.mumblrlogo, .mumblrlogo2{
 	color:white;
 	text-align: right;
 	padding-right: 5px;
 	text-shadow: 1px 1px #636363;
-	margin-top: -50px;
 
 
+
+}
+
+
+.mumblrlogo{
+		margin-top: -50px;
+}
+
+.mumblrlogo2{
+		margin-top: 10px;
 }
 
