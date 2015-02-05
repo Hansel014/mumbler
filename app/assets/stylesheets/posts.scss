@@ -90,3 +90,29 @@
 	float: right;
 	padding-right: 5px;
 }
+
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+
+    .rightnav {
+	position: fixed;
+	border: 1px solid black;
+	height: 700px;
+	width: 150px;
+	right: 0;
+	margin-right: 0px;
+	background-color: rgba(10, 10, 10, .4);
+	top:40px;
+}
+
+.postsbody {
+	position: absolute;
+	border: 1px solid black;
+	width: 900px;
+	height: 5000px;
+	margin-left: 200px;
+
+}
+
+}

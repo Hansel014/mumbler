@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
 
-    resources :users
+    resources :users do 
+    	get :following, :followers
+    end
     resources :posts do 
       resources :comments
     end
+    resources :relationships, only: [:create, :destroy]
 
      get '/signin', to: 'sessions#new'
      post '/signin', to: 'sessions#create'
