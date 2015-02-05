@@ -15,8 +15,8 @@
 				<div class="posttitle">
 
 				<%= link_to post.title, post_path(post) %> 
-
-				<span id ="timecreated"> <%= post.created_at.strftime("%b. %d %Y") %> </span>
+			
+				<span id ="timecreated">Posted by: <%= post.user.name %> on <%= post.created_at.strftime("%b. %d %Y") %> </span>
 
 				</div>
 				<br>
