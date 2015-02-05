@@ -3,7 +3,7 @@
 	<div class ="userprofilebody">
 		<div class="userprofilecontent">
 			<h1><%= @user.name %></h1>
-			<%= image_tag @user.image.url(:large) %>
+			<%= image_tag @user.image.url(:small) %>
 
 			<p>(<%= @user.email %>) <%= @user.bio %></p>
 
@@ -16,17 +16,26 @@
 			</ul>
 
 
-<%= link_to 'back', users_path %> | <%= link_to 'edit', edit_user_path(@user) %>
+
+
+<%= link_to 'edit', edit_user_path(@user) %>
+<%= link_to 'back', users_path %> | 
 <ul>
-
-
 
 <%= link_to 'Follow', follow_path(@user)%>
 
 <%= link_to 'Unfollow', unfollow_path(@user)%>
 
+<%if @user.followers.count >= 2 %>
+<h4><%= @user.name%> Has <%= @user.followers.count%> Followers</h4>
+<%else%>
+<h4><%= @user.name%> Has <%= @user.followers.count%> Follower</h4>
+<%end%>
 
-<h4>User's Followers</h4>
+
+
+
+
 <% @user.followers.each do |user| %>
 	<li><%= user.name %></li>
 <% end %>
