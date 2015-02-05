@@ -25,7 +25,7 @@
 <%= link_to 'Unfollow', unfollow_path(@user)%>
 
 <h4>User's Followers</h4>
-<% current_user.followers.each do |user| %>
+<% @user.followers.each do |user| %>
 	<li><%= user.name %></li>
 <% end %>
 </ul>
