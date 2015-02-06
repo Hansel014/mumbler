@@ -1,3 +1,5 @@
+
+
 <div class="posttopmargin">
 <br>
 	<div class ="userprofilebody">
@@ -16,16 +18,31 @@
 			</ul>
 
 
-
-
+<% if @user.id == current_user.id %>
 <%= link_to 'edit', edit_user_path(@user) %>
 <%= link_to 'back', users_path %> | 
+<% else %>
+<%= link_to 'back', users_path %>
+<%end%>
 <ul>
 
 
-<%= link_to 'Follow', follow_path(@user)%>
+<%@relationship = Relationship.find_by(follower_id: current_user.id, followed_id: params[:id])%>
 
+<% if @user.id == current_user.id %>
+This is You!
+<%elsif @relationship != nil%>
 <%= link_to 'Unfollow', unfollow_path(@user)%>
+<%else%>
+<%= link_to 'Follow', follow_path(@user)%>
+<%end%>
+
+
+
+
+
+
+
 
 <%if @user.followers.count >= 2 %>
 <h4><%= @user.name%> Has <%= @user.followers.count%> Followers</h4>
