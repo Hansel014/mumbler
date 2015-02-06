@@ -1,7 +1,7 @@
 <div class="posttopmargin">
 <br>
 
-<div class="postsbody">
+<div class="showpostbody">
 	<h1><%= @post.title %></h1>
 	<p id="postbodyformat"><%= @post.body %></p>
 	 
@@ -21,6 +21,10 @@
 		<span><%= c.body %></span>
 		<p> Posted by: <%= c.user.name %></p>
 		<p><%= c.created_at.strftime("%b. %d %Y") %></p>
+		<% if current_user == set_comment.user%>
+				<%= link_to 'edit', edit_post_path %> |
+				<%= link_to 'delete', post_path, method: :delete, data: {confirm: "Really delete this post?"} %>
+	<% end %> 
 	</div>
 	<% end %>
 </div>

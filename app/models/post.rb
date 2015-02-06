@@ -2,6 +2,8 @@ class Post < ActiveRecord::Base
 	belongs_to :user
 	has_many :comments
 
+	scope :created_before, ->(time) { where("created_at < ?", time) }
+
 	def display_status
 		if self.status == 0
 			"closed"
@@ -13,4 +15,5 @@ class Post < ActiveRecord::Base
 			"not set"
 		end
 	end
+
 end
