@@ -8,6 +8,7 @@ class PostsController < ApplicationController
   def new
     if current_user
      @post = Post.new
+
     else
       flash[:notice] = "Please sign in first."
       redirect_to signin_path
@@ -25,8 +26,14 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(post_params)
-    redirect_to @post, notice: "New post created."
+    @post = Post.new(post_params)
+    if @post.save
+      redirect_to @post, notice: "New post created."
+    else 
+      render :new
+    end
+    
+    
   end
 
   def update

@@ -23,7 +23,7 @@
 		<p><%= c.created_at.strftime("%b. %d %Y") %></p>
 		<% if current_user == set_comment.user%>
 				<%= link_to 'edit', edit_post_path %> |
-				<%= link_to 'delete', post_path, method: :delete, data: {confirm: "Really delete this post?"} %>
+				<%= link_to 'delete', post_comment_path(current_post, c), method: :delete, data: {confirm: "Really delete this comment?"} %>
 	<% end %> 
 	</div>
 	<% end %>
@@ -31,12 +31,13 @@
 <div class="rightnav">
 	<div>
 		<ul>
-			<li id = "returnhome"><p><%= link_to 'Post', posts_path %></p></li>
-			<li id = "newpost"><p><%= link_to 'New Post', new_post_path %></p></li>
-			<li id = "viewprofile"><p><%= link_to 'View Profile', user_path(current_user)%></p></li>
+			<li id = "returnhome"><a><%= link_to 'Home', posts_path %></a></li>
+			<li id = "newpost"><a><%= link_to 'New Post', new_post_path %></a></li>
+			<li id = "viewprofile"><a><%= link_to 'View Profile', user_path(current_user)%></a></li>
 			<li id = "followusers"></li>
-			<li id = "accountsettings"><p><%= link_to 'Account Settings', edit_user_path(current_user) %></p></li>
-			<li id = "signout"><p><%= link_to 'sign out', logout_path, method: :delete %></p></li>
+			<li id = "accountsettings"><a><%= link_to 'Account Settings', edit_user_path(current_user) %></a></li>
+			<li id = "signout"><a><%= link_to 'sign out', logout_path, method: :delete %></li>
+
 
 
 		</ul>

@@ -3,6 +3,7 @@ class Post < ActiveRecord::Base
 	has_many :comments
 
 	scope :created_before, ->(time) { where("created_at < ?", time) }
+	validates :body, length: {in: 5..7000}
 
 	def display_status
 		if self.status == 0

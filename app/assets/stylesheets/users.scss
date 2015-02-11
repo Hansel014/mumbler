@@ -87,4 +87,69 @@
 	
 }
 
+/*USER PROFILE STYLES*/
+
+
+.userbioposts, .userimageleft {
+	border:1px solid black;
+	display: inline-block;
+	/*text-align: center;*/
+	/*height: 250px;*/
+
+}
+
+
+
+.userbioposts {
+	position: absolute;
+	margin-left: 10px;
+	width: 600px;
+	padding-right: 5px;
+	padding-left: 5px;
+
+
+
+}
+
+.userbioposts li {
+	list-style-type: none;
+	margin-left: -20px
+
+}
+
+.userposttitle {
+	height: 30px;
+	width: 500px;
+	font-size:1.3em;
+	border-radius: 5px;
+	background-color: rgba(10, 10, 10, .8);
+	padding: 5px;
+
+}	
+
+.userpostbody {
+	word-wrap: break-word;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

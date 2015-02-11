@@ -31,7 +31,7 @@ before_action :set_comment, only: [:new, :edit, :show, :destroy]
 
   def destroy
   	@comment.destroy
-    redirect_to comments_path, notice: "Comment deleted."
+    redirect_to post_path(params[:post_id]), notice: "Comment deleted."
   end
 
   private 

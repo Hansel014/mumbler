@@ -4,20 +4,39 @@
 <br>
 	<div class ="userprofilebody">
 		<div class="userprofilecontent">
+			
+		<div class="userimageleft">
 			<h1><%= @user.name %></h1>
 			<%= image_tag @user.image.url(:small) %>
 
 			<p>(<%= @user.email %>) <%= @user.bio %></p>
+		</div>
 
+		<div class="userbioposts">
 			<h3><%= @user.name %>'s Posts</h3>
 
 			<ul>
 				<% @user.posts.each do |post| %>
-				<li><%= link_to post.title, post %></li>
+				<li>
+				<div class="userposttitle">
+							
+					<%= link_to post.title, post %> 
+					
+					<span id ="timecreated">Posted by: <%= post.user.name %> on <%= post.created_at.strftime("%b. %d %Y") %> </span>
+
+				</div>
+
+				<div class="userpostbody">
+						<%= post.body[0...1000] %> ...
+				</div>	
+
+				<p class="readmore"><%= link_to "Read More...", post_path(post) %></p>
+
+				</li>
 				<% end %>
 			</ul>
-
-
+		</div>
+<br>
 <% if @user.id == current_user.id %>
 <%= link_to 'edit', edit_user_path(@user) %>
 <%= link_to 'back', users_path %> | 
@@ -66,7 +85,7 @@ This is You!
 	<div class="rightnav">
 	<div>
 		<ul>
-			<li id = "returnhome"><p><%= link_to 'Post', posts_path %></p></li>
+			<li id = "returnhome"><p><%= link_to 'Home', posts_path %></p></li>
 			<li id = "newpost"><p><%= link_to 'New Post', new_post_path %></p></li>
 			<li id = "viewprofile"><p><%= link_to 'View Profile', user_path(current_user)%></p></li>
 			<li id = "followusers"></li>
