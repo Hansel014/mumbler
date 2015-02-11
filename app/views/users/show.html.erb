@@ -4,10 +4,11 @@
 <br>
 	<div class ="userprofilebody">
 		<div class="userprofilecontent">
-			<h1><%= @user.name %></h1>
-			<%= image_tag @user.image.url(:small) %>
+			<h1><%= @user.name %> </h1>
 
-			<p>(<%= @user.email %>) <%= @user.bio %></p>
+			<%= image_tag @user.image.url(:small) %>
+			
+			<p>(<%= @user.email %>) <br><%= @user.bio %></p>
 
 			<h3><%= @user.name %>'s Posts</h3>
 
@@ -27,15 +28,17 @@
 <ul>
 
 
+
 <%@relationship = Relationship.find_by(follower_id: current_user.id, followed_id: params[:id])%>
 
+
 <% if @user.id == current_user.id %>
-This is You!
-<%elsif @relationship != nil%>
-<%= link_to 'Unfollow', unfollow_path(@user)%>
-<%else%>
-<%= link_to 'Follow', follow_path(@user)%>
-<%end%>
+						This is You!
+						<%elsif @relationship != nil%>
+						<%= link_to 'Unfollow', unfollow_path(@user)%>
+						<%else%>
+						<%= link_to 'Follow', follow_path(@user)%>
+						<%end%>
 
 
 
@@ -43,8 +46,7 @@ This is You!
 
 
 
-
-<%if @user.followers.count >= 2 %>
+<%if @user.followers.count >= 2 || @user.followers.count == 0%>
 <h4><%= @user.name%> Has <%= @user.followers.count%> Followers</h4>
 <%else%>
 <h4><%= @user.name%> Has <%= @user.followers.count%> Follower</h4>
