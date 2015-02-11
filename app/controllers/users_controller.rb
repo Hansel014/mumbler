@@ -23,15 +23,24 @@ class UsersController < ApplicationController
   end
 
   def create
-  	@user = User.create(user_params)
-    session[:user_id] = @user.id
-  	redirect_to @user, notice: "New user created."
+  	@user = User.new(user_params)
+    if @user.save
+        session[:user_id] = @user.id
+  	   redirect_to @user, notice: "New user created."
+    else 
+      render :new
+    end
 
   end
 
   def update
-  	@user.update(user_params)
-  	redirect_to @user, notice: "User successfully updated."
+  	
+  	
+     if @user.update(user_params)
+      redirect_to @user, notice: "User successfully updated."
+    else 
+      render :edit
+    end
   end
 
   def destroy

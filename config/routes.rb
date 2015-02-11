@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
      get '/signin', to: 'sessions#new'
      post '/signin', to: 'sessions#create'
-     delete '/logout', to: 'sessions#destroy'
+     get '/logout', to: 'sessions#destroy'
 
 
   # You can have the root of your site routed with "root"

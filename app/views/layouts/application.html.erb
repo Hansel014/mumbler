@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Mumblr</title>
+ <link href='http://fonts.googleapis.com/css?family=Days+One' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -9,7 +10,7 @@
 <body>
 	<header>
 	<% if current_user != nil %>
-	<a class="usernavpic"><%= image_tag current_user.image.url(:icon)%> </a> <h3 class="usernavname">Welcome <%=current_user.name%>! </h3>
+	<a class="usernavpic"><%= image_tag current_user.image.url(:small)%> </a> <h3 class="usernavname">Welcome <%=current_user.name%>! </h3>
 	<h1 class="mumblrlogo"><%= "Mumblr." %></h1>
 	<%else%>
 		<h1 class="mumblrlogo2"><%= "Mumblr." %></h1>

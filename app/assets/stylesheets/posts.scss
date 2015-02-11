@@ -4,6 +4,10 @@
 	float: left;
 }
 
+.postsbody h1 {
+	color: white;
+}
+
 .rightnav {
 	border: 1px solid black;
 	height: 800px;
@@ -16,7 +20,7 @@
 
 }
 
-.navbartext a{
+.navbartext a, .rightnav a{
 	font-size: 1.4em;
 	text-align: center;
 	color: white;
@@ -78,19 +82,7 @@
 
 }
 
-.poststyling{
-	/*border: 1px solid black;*/
-	height: 300px;
-	width: 800px;
-	padding-bottom: 20px;
-	margin: 0 auto;
-	margin-bottom: 40px;
-	border-radius: 10px;
-	overflow: auto;
-	padding: 20px;
-	background-color: white;
 
-}
 
 .posttitle {
 	/*border: 1px solid black;*/
@@ -129,6 +121,8 @@
 	-moz-box-shadow: inset 10px 10px 28px 1px rgba(0,0,0,0.32);
 	box-shadow: inset 10px 10px 28px 1px rgba(0,0,0,0.32);
 }
+
+
 
 #newpost {
 	margin-top: 33px;
@@ -197,3 +191,82 @@
 	padding: 5px;
 
 }
+
+.usericon{
+	margin-left: -20px;
+	position: absolute;
+
+}
+
+.usericon img{
+	border: 1px solid black;
+	border-radius: 10px
+}
+
+.poststyling{
+	border: 1px solid black;
+	height: 400px;
+	width: 800px;
+	padding-bottom: 20px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+	border-radius: 10px;
+	overflow: auto;
+	padding: 20px;
+	background-color: white;
+	margin-left: 50px;
+
+}
+
+.buttonboxhome, .buttonboxsignout {
+	height: 100px;
+	width: 100px;
+	margin-top: 35px;
+	border: 100;
+}
+
+.buttonboxnew, .buttonboxsettings, .buttonboxview {
+	margin-top: 20px
+}
+
+.buttonboxhome a:hover {
+	color: black;
+	background-color: white;
+}
+
+
+/*#cl-effect-1 a::before,
+#cl-effect-1 a::after {
+	display: inline-block;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	transition: transform 0.3s, opacity 0.2s;
+}
+
+#cl-effect-1 a::before {
+	margin-right: 10px;
+	content: '[';
+	-webkit-transform: translateX(20px);
+	-moz-transform: translateX(20px);
+	transform: translateX(20px);
+}
+
+#cl-effect-1 a::after {
+	margin-left: 10px;
+	content: ']';
+	-webkit-transform: translateX(-20px);
+	-moz-transform: translateX(-20px);
+	transform: translateX(-20px);
+}
+
+#cl-effect-1 a:hover::before,
+#cl-effect-1 a:hover::after,
+#cl-effect-1 a:focus::before,
+#cl-effect-1 a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+}
+*/
